@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="TestWebApp:war">
+    <output-path>$PROJECT_DIR$/out</output-path>
+    <root id="archive" name="TestWebApp.war">
+      <element id="javaee-facet-resources" facet="TestWebApp/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="TestWebApp" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="artifact" artifact-name="JBFileManager:jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

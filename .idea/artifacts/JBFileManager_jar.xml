@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="JBFileManager:jar">
+    <output-path>$PROJECT_DIR$/out</output-path>
+    <root id="archive" name="JBFileManager.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/JBFileManager/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="JBFileManager" />
+      <element id="directory" name="js">
+        <element id="dir-copy" path="$PROJECT_DIR$/JBFileManager/js" />
+      </element>
+      <element id="directory" name="css">
+        <element id="dir-copy" path="$PROJECT_DIR$/JBFileManager/css" />
+      </element>
+      <element id="directory" name="img">
+        <element id="dir-copy" path="$PROJECT_DIR$/JBFileManager/img" />
+      </element>
+    </root>
+  </artifact>
+</component>

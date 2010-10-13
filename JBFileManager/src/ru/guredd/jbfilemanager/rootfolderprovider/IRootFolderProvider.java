@@ -1,5 +1,6 @@
 package ru.guredd.jbfilemanager.rootfolderprovider;
 
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.util.List;
 import java.util.Properties;
@@ -14,5 +15,5 @@ import java.util.Properties;
 public interface IRootFolderProvider {
     public void initialize(List objs);
     public boolean isInitialized();
-    public File getRootFolder();
+    public File getRootFolder(HttpSession session);
 }

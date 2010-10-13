@@ -16,30 +16,25 @@ public final class RootFolderProviderFactory {
     private static IRootFolderProvider rootFolderProvider = null;
 
     public synchronized static IRootFolderProvider getRootFolderProvider() {
-        if(!initialized) {
+        if(initialized) {
+            return rootFolderProvider;
+        } else {
             return null;
         }
-        return rootFolderProvider;
     }
 
-    public synchronized static void initialize(String className, List objs) {
+    public synchronized static void initialize(String className, List objs) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
         initialized = false;
         rootFolderProvider = null;
-        try {
-            Object obj = Class.forName(className).newInstance();
-            if(obj instanceof IRootFolderProvider) {
-                rootFolderProvider = (IRootFolderProvider) obj;
-                rootFolderProvider.initialize(objs);
-                if(rootFolderProvider.isInitialized()) {
-                    initialized = true;
-                }
+        Object obj = Class.forName(className).newInstance();
+        if(obj instanceof IRootFolderProvider) {
+            rootFolderProvider = (IRootFolderProvider) obj;
+            rootFolderProvider.initialize(objs);
+            if(rootFolderProvider.isInitialized()) {
+                initialized = true;
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } else {
+            throw new InstantiationException("failed to instantiate IRootFolderProvider");
         }
     }
 

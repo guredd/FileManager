@@ -1,6 +1,7 @@
 package ru.guredd.jbfilemanager.rootfolderprovider;
 
 import javax.servlet.ServletConfig;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.util.List;
 
@@ -37,7 +38,7 @@ public class FixedRootFolderProvider implements IRootFolderProvider {
         return initialized;
     }
 
-    public File getRootFolder() {
+    public File getRootFolder(HttpSession session) {
         if(!initialized)
             {return null;}
         else {

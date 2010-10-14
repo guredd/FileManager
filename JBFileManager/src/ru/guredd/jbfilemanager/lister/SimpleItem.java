@@ -36,4 +36,12 @@ public class SimpleItem implements IListedItem {
     public boolean isExpandable() {
         return ListerFactory.hasType(type);
     }
+
+    public static String getTypeByName(String name) {
+        if(name == null) {
+            return IListedItem.UNKNOWN;
+        } else {
+            return (name.lastIndexOf(".")==-1)?IListedItem.UNKNOWN:name.substring(name.lastIndexOf(".")+1,name.length());
+        }
+    }
 }

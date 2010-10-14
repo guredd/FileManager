@@ -9,6 +9,8 @@ package ru.guredd.jbfilemanager.lister;
  */
 public interface IListedItem {
     public static final String FOLDER = "folder";
+    public static final String UNKNOWN = "unknown";
+    public static final String UNSUPPORTED = "unsupp";
     public String getName();
     public String getType();
     public boolean isExpandable();

@@ -1,6 +1,6 @@
 package ru.guredd.jbfilemanager.lister;
 
-import java.util.List;
+import java.io.IOException;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,7 +12,7 @@ import java.util.List;
 public interface ILister {
     public static int PREDEFINED_SIMPLE_MODE = 0;
     public static int PREDEFINED_COMPLEX_MODE = 1;
-        
-    public List<IListedItem> list(String path);
+
+    public IListedItem[] list(String path) throws IOException;
     public void setMode(int mode);
 }

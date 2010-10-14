@@ -1,7 +1,8 @@
 package ru.guredd.jbfilemanager.lister;
 
 import java.io.File;
-import java.util.List;
+import java.io.IOException;
+import java.util.TreeSet;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,26 +13,36 @@ import java.util.List;
  */
 public class FolderLister implements ILister {
 
-    public List<IListedItem> list(String path) {
-
-        File dir = new File(path);
-
-        String[] filesInDir = dir.list();
-
-        // sort the list of files (optional)
-        // Arrays.sort(filesInDir);
-
-
-        for ( int i=0; i<filesInDir.length; i++ )
-        {
-
+    public IListedItem[] list(String path) throws IOException {
+        if(path == null) {
+            return null;
         }
-        return null;
+        File dir = new File(path);
+        File[] filesInDir = dir.listFiles();
+        TreeSet<File> set = new TreeSet<File>(DefaultFileComparator.getInstance());
+
+        for(int i=0;i<filesInDir.length;i++) {
+            set.add(filesInDir[i]);
+        }
+        return buildList(set);
     }
 
     public void setMode(int mode) {
         if(mode != ILister.PREDEFINED_SIMPLE_MODE) {
             throw new UnsupportedOperationException("only PREDEFINED_SIMPLE_MODE(0) is supported");
         }
+    }
+
+    private IListedItem[] buildList(TreeSet<File> set) {
+        if(set == null) {
+            return null;
+        }
+        File[] array = (File[])set.toArray();
+        IListedItem[] result = new SimpleItem[array.length];
+
+        for(int i=0;i<array.length;i++) {
+            result[i] = new SimpleItem(array[i].getName(),SimpleItem.getTypeByName(array[i].getName()));
+        }
+        return result;
     }
 }

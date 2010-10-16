@@ -105,8 +105,12 @@ public class PrimaryServlet extends HttpServlet {
                         }
                         try {
                             IListedItem[] result = ListerFactory.getLister(type).list(root.getCanonicalPath()+path);
-                            String response = JSONBuilder.buildItemsList(result);
-                        } catch (IOException e) {
+                            String jsonresponse = JSONBuilder.buildItemsList(result);
+			                resp.setStatus(HttpServletResponse.SC_OK);
+			                resp.setContentType("text/html;charset=UTF-8");
+			                resp.getOutputStream().write(jsonresponse.getBytes("UTF-8"));
+			                resp.flushBuffer();                            
+                        } catch (Exception e) {
                             log("error, while listing path: " + path,e);
                             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
                         }

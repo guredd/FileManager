@@ -1,6 +1,7 @@
 package ru.guredd.jbfilemanager.lister;
 
 import java.io.IOException;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -20,9 +21,10 @@ public final class ListerFactory {
     public synchronized static void initialize(Properties props, int mode) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException {
         initialized = false;
         if (props != null) {
-            while (props.keys().hasMoreElements()) {
-                String key = (String) props.keys().nextElement();
-                Object obj = Class.forName(key).newInstance();
+            Enumeration keys = props.keys();
+            while (keys.hasMoreElements()) {
+                String key = (String) keys.nextElement();
+                Object obj = Class.forName(props.getProperty(key)).newInstance();
                 if (obj instanceof ILister) {
                     ((ILister) obj).setMode(mode);
                     listers.put(key, (ILister) obj);

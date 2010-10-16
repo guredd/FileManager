@@ -15,6 +15,7 @@
       <element id="directory" name="img">
         <element id="dir-copy" path="$PROJECT_DIR$/JBFileManager/img" />
       </element>
+      <element id="file-copy" path="$PROJECT_DIR$/JBFileManager/listers.properties" />
     </root>
   </artifact>
 </component>

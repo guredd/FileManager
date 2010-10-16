@@ -8,8 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-      <script src="jquery-1.4.2.min.js" type="text/javascript"></script>
-      <script src="http://localhost:8080/jbfm.js" type="text/javascript"></script>      
+      <script src="http://localhost:8080/test/jquery-1.4.2.min.js" type="text/javascript"></script>
+      <script src="http://localhost:8080/test/jbfm.js" type="text/javascript"></script>      
       <title>JBFileManager test page</title></head>
-  <body>Place your content here</body>
+  <body>
+    <p>Something before</p>
+
+    <ul id="fm1"/>
+    <script>jbfilemanager("fm1","http://localhost:8080/JBFileManager","Files")</script>
+
+
+    <p>Something after</p>
+  </body>
 </html>

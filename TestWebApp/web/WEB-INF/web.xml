@@ -20,7 +20,7 @@
             <param-name>details_mode</param-name>
             <param-value>0</param-value>
         </init-param>
-         <init-param>
+        <init-param>
             <param-name>sort_mode</param-name>
             <!--possible values: name, size, modified -->   
             <param-value>name</param-value>
@@ -28,7 +28,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>JBFileManager</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/qqq</url-pattern>
     </servlet-mapping>
 
 </web-app>

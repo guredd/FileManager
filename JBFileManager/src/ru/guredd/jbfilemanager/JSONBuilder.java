@@ -11,8 +11,28 @@ import ru.guredd.jbfilemanager.lister.IListedItem;
  */
 public class JSONBuilder {
 
-    public static String buildItemsList(IListedItem[] items) {
+    private static final String NODES = "nodes";
+    private static final String NODE_NAME = "name";
+    private static final String NODE_TYPE = "type";
+    private static final String NODE_EXPANDABLE = "exp";
 
-        return null;
+    public static String buildItemsList(IListedItem[] items) {
+        StringBuffer buf = new StringBuffer("{\"" + NODES + "\":[");
+        if(items != null) {
+            for(int i=0;i<items.length;i++) {
+                buf.append("{\"" + NODE_NAME + "\":\"");
+                buf.append(items[i].getName());
+                buf.append("\",\"" + NODE_TYPE + "\":\"");
+                buf.append(items[i].getType());
+                buf.append("\",\"" + NODE_EXPANDABLE + "\":\"");
+                buf.append(items[i].isExpandable());
+                buf.append("\"}");
+                if(i != items.length-1) {
+                    buf.append(',');
+                }
+            }
+        }
+        buf.append("]}");
+        return buf.toString();
     }
 }

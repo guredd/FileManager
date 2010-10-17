@@ -28,7 +28,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>JBFileManager</servlet-name>
-        <url-pattern>/qqq</url-pattern>
+        <url-pattern>/jbfm</url-pattern>
     </servlet-mapping>
 
 </web-app>

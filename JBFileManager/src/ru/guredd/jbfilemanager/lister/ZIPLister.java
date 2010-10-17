@@ -42,20 +42,22 @@ public class ZIPLister extends FolderLister {
         return buildList(set);
     }
 
-     private IListedItem[] buildList(TreeSet<ZipEntry> set) {
+    private IListedItem[] buildList(TreeSet<ZipEntry> set) {
         if(set == null) {
             return null;
         }
-        ZipEntry[] array = (ZipEntry[])set.toArray();
+        Object[] array = set.toArray();
         IListedItem[] result = new SimpleItem[array.length];
         String type;
+        ZipEntry z;
         for(int i=0;i<array.length;i++) {
-            if(array[i].isDirectory()) {
+            z = (ZipEntry)array[i];
+            if(z.isDirectory()) {
                 type = IListedItem.FOLDER;
             } else {
-                type = SimpleItem.getTypeByName(array[i].getName());
+                type = SimpleItem.getTypeByName(z.getName());
             }
-            result[i] = new SimpleItem(array[i].getName(),type);
+            result[i] = new SimpleItem(z.getName(),type);
         }
         return result;
     }

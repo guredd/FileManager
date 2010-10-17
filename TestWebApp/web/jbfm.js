@@ -32,7 +32,7 @@ function jbfilemanager(id, url, rootLabel) {
 
         var onSuccess = function(data) {
             if (!data.errcode) {
-                onLoaded(data)
+                onLoaded(data.nodes)
                 showProgress(false)
             } else {
                 showProgress(false)
@@ -41,7 +41,7 @@ function jbfilemanager(id, url, rootLabel) {
         }
 
         var onAjaxError = function(xhr, status) {
-            showLoading(false)
+            showProgress(false)
             var errinfo = { errcode: status }
             if (xhr.status != 200) {
                 // может быть статус 200, а ошибка
@@ -61,30 +61,33 @@ function jbfilemanager(id, url, rootLabel) {
 
 
         function showProgress(on) {
-
             var expand = node.getElementsByTagName('DIV')[0]
             expand.className = on ? 'jbfm-progress' : 'jbfm-expand'
         }
 
-        function onLoaded(data) {
+        function onLoaded(nodes) {
 
-            for(var i=0; i<data.length; i++) {
-                var child = data[i]
+            node.getElementsByTagName('UL')[0].innerHTML = ''
+
+            for(var i=0; i<nodes.length; i++) {
+                var child = nodes[i]
                 var li = document.createElement('LI')
-                li.id = child.id
 
                 $(li).addClass('jbfm-node')
 
-                if(child.isFolder) {
+                if(child.exp == "true") {
                      $(li).addClass('jbfm-closed')
                 } else {
                      $(li).addClass('jbfm-leaf')
                 }
 
-                if (i == data.length-1) $(li).addClass('jbfm-last')
+                if (i == nodes.length-1) $(li).addClass('jbfm-last')
 
-                li.innerHTML = '<div class="jbfm-expand"></div><div class="jbfm-name">'+child.title+'</div>'
-                if (child.isFolder) {
+                li.innerHTML = '<div class="jbfm-expand"></div>'
+                li.innerHTML += '<div class="jbfm-type-default jbfm-type-' + child.type.toLowerCase() + '"></div>'
+                li.innerHTML += '<div class="jbfm-name">'+child.name+'</div>'          
+
+                if (child.exp == "true") {
                     li.innerHTML += '<ul class="jbfm-container"></ul>'
                 }
                 node.getElementsByTagName('UL')[0].appendChild(li)
@@ -94,13 +97,36 @@ function jbfilemanager(id, url, rootLabel) {
             switchNodeClass(node)
         }
 
+        // get node type from associated jbfm-type-... class
+        function getNodeType() {
+            var classes = node.getElementsByTagName('DIV')[1].className
+            var arr = classes.split(' ',5)
+            var class = ''
+            for(var i=0; i<arr.length; i++) {
+                if(arr[i].substr(0,10) == 'jbfm-type-' && arr[i] != 'jbfm-type-default') {
+                    class = arr[i]
+                    break
+                }
+            }
+            return class.substr(10,class.length-10)
+        }
+
+        // build node path as string for ajax request
+        function buildNodePath() {
+            var inode = node
+            var path = ''
+            while(!$(inode).hasClass('jbfm-root')) {
+                path = '/' + inode.getElementsByTagName('DIV')[2].innerHTML + path
+                inode = inode.parentNode.parentNode
+            }
+            return path
+        }
 
         showProgress(true)
 
-
         $.ajax({
             url: url,
-            data: node.id,
+            data: {op:"list",type:getNodeType(),path:buildNodePath()},
             dataType: "json",
             success: onSuccess,
             error: onAjaxError,
@@ -108,7 +134,7 @@ function jbfilemanager(id, url, rootLabel) {
         })
     }
 
-    $(rootUL).click = function(event) {
+    $(rootUL).click(function(event) {
         event = event || window.event
         var clickedElem = event.target || event.srcElement
 
@@ -122,5 +148,5 @@ function jbfilemanager(id, url, rootLabel) {
         }
             
         listNode(node)
-    }
+    })
 }

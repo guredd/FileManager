@@ -1,0 +1,103 @@
+
+.jbfm-container {
+    padding: 0;
+    margin: 0;
+}
+
+.jbfm-container li {
+    list-style-type: none;
+}
+
+/* indent for all tree children excepts root */
+.jbfm-node {
+    background-image : url(img/i.gif);
+    background-position : top left;
+    background-repeat : repeat-y;
+    margin-left: 18px;
+    zoom: 1;
+}
+
+.jbfm-root {
+    margin-left: 0;
+}
+
+/* left vertical line (grid) for all nodes */
+.jbfm-last {
+    background-image: url(img/i_half.gif);
+    background-repeat : no-repeat;
+}
+
+.jbfm-opened .jbfm-expand {
+    background-image: url(img/expand_minus.gif);
+}
+
+/* closed is higher priority than open */
+.jbfm-closed .jbfm-expand {
+    background-image: url(img/expand_plus.gif);
+}
+
+/* highest priority */
+.jbfm-leaf .jbfm-expand {
+    background-image: url(img/expand_leaf.gif);
+}
+
+.jbfm-name {
+    min-height: 18px;
+    margin-left:18px;
+}
+
+* html .jbfm-name {
+    height: 18px;
+}
+
+.jbfm-expand {
+    width: 18px;
+    height: 18px;
+    float: left;
+}
+
+.jbfm-opened .jbfm-container {
+    display: block;
+}
+
+.jbfm-closed .jbfm-container {
+    display: none;
+}
+
+.jbfm-opened .jbfm-expand, .jbfm-closed .jbfm-expand {
+    cursor: pointer;
+}
+.jbfm-leaf .jbfm-expand {
+    cursor: auto;
+}
+
+.jbfm-progress   {
+    width: 18px;
+    height: 18px;
+    float: left;
+    background-image: url(img/ajax-loader.gif);
+    background-repeat : no-repeat;
+}
+
+/* File types and folder classes are listed below: */
+
+.jbfm-type-default   {
+    width: 18px;
+    height: 18px;
+    float: left;
+    background-image: url(img/unknown.png);
+}
+
+.jbfm-type-unknown   {
+    width: 18px;
+    height: 18px;
+    float: left;
+    background-image: url(img/unknown.png);
+}
+
+.jbfm-type-folder   {
+    width: 18px;
+    height: 18px;
+    float: left;
+    background-image: url(img/folder.png);
+}

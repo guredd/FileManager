@@ -1,6 +1,7 @@
 package ru.guredd.jbfilemanager;
 
 import ru.guredd.jbfilemanager.lister.IListedItem;
+import ru.guredd.jbfilemanager.lister.ILister;
 import ru.guredd.jbfilemanager.lister.ListerFactory;
 import ru.guredd.jbfilemanager.rootfolderprovider.RootFolderProviderFactory;
 
@@ -27,7 +28,7 @@ import java.util.logging.Logger;
  */
 public class PrimaryServlet extends HttpServlet {
 
-    private static final String TYPE_OF_OPERATION = "type";
+    private static final String TYPE_OF_OPERATION = "op";
 
     private static final String OPERATION_LIST_DIR = "list";
     private static final String OPERATION_GET_CSS = "css";
@@ -104,12 +105,18 @@ public class PrimaryServlet extends HttpServlet {
                             type = IListedItem.FOLDER;
                         }
                         try {
-                            IListedItem[] result = ListerFactory.getLister(type).list(root.getCanonicalPath()+path);
-                            String jsonresponse = JSONBuilder.buildItemsList(result);
-			                resp.setStatus(HttpServletResponse.SC_OK);
-			                resp.setContentType("text/html;charset=UTF-8");
-			                resp.getOutputStream().write(jsonresponse.getBytes("UTF-8"));
-			                resp.flushBuffer();                            
+                            ILister lister = ListerFactory.getLister(type.toLowerCase());
+                            if(lister != null) {
+                                IListedItem[] result = lister.list(root.getCanonicalPath()+path);
+                                String jsonresponse = JSONBuilder.buildItemsList(result);
+			                    resp.setStatus(HttpServletResponse.SC_OK);
+			                    resp.setContentType("text/html;charset=UTF-8");
+			                    resp.getOutputStream().write(jsonresponse.getBytes("UTF-8"));
+			                    resp.flushBuffer();
+                            } else {
+                                log("lister is not defined for type: " + type.toLowerCase());
+                                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);    
+                            }
                         } catch (Exception e) {
                             log("error, while listing path: " + path,e);
                             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);

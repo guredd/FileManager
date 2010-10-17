@@ -37,16 +37,18 @@ public class FolderLister implements ILister {
         if(set == null) {
             return null;
         }
-        File[] array = (File[])set.toArray();
+        Object[] array = set.toArray();
         IListedItem[] result = new SimpleItem[array.length];
         String type;
+        File f;
         for(int i=0;i<array.length;i++) {
-            if(array[i].isDirectory()) {
+            f = (File)array[i];
+            if(f.isDirectory()) {
                 type = IListedItem.FOLDER;
             } else {
-                type = SimpleItem.getTypeByName(array[i].getName());
+                type = SimpleItem.getTypeByName(f.getName());
             }
-            result[i] = new SimpleItem(array[i].getName(),type);
+            result[i] = new SimpleItem(f.getName(),type);
         }
         return result;
     }

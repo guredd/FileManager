@@ -30,9 +30,9 @@ public class DefaultFileComparator extends AbstractFileComparator {
             File f1 = (File) o1;
             File f2 = (File) o2;
             if(f1.isDirectory() && !f2.isDirectory()) {
-                return 1;
-            } else if(!f1.isDirectory() && f2.isDirectory()) {
                 return -1;
+            } else if(!f1.isDirectory() && f2.isDirectory()) {
+                return 1;
             } else if(f1.isDirectory() && f2.isDirectory()) {
                 return compareByName(f1.getName(),f2.getName());
             }
@@ -46,9 +46,9 @@ public class DefaultFileComparator extends AbstractFileComparator {
             ZipEntry z1 = (ZipEntry) o1;
             ZipEntry z2 = (ZipEntry) o2;
             if(z1.isDirectory() && !z2.isDirectory()) {
-                return 1;
-            } else if(!z1.isDirectory() && z2.isDirectory()) {
                 return -1;
+            } else if(!z1.isDirectory() && z2.isDirectory()) {
+                return 1;
             } else if(z1.isDirectory() && z2.isDirectory()) {
                 return compareByName(z1.getName(),z2.getName());
             }

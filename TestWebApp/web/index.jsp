@@ -8,6 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
+      <style type="text/css">
+        @import "jbfm.css";
+      </style>
       <script src="http://localhost:8080/test/jquery-1.4.2.min.js" type="text/javascript"></script>
       <script src="http://localhost:8080/test/jbfm.js" type="text/javascript"></script>      
       <title>JBFileManager test page</title></head>
@@ -15,7 +18,7 @@
     <p>Something before</p>
 
     <ul id="fm1"/>
-    <script>jbfilemanager("fm1","http://localhost:8080/JBFileManager","Files")</script>
+    <script>jbfilemanager("fm1","http://localhost:8080/test/jbfm","Root")</script>
 
 
     <p>Something after</p>

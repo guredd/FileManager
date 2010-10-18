@@ -22,6 +22,7 @@ function jbfilemanager(id, url, rootLabel) {
         if($(node).hasClass('jbfm-opened')) {
             $(node).removeClass('jbfm-opened')
             $(node).addClass('jbfm-closed')
+            node.getElementsByTagName('UL')[0].innerHTML = ''
         } else {
             $(node).removeClass('jbfm-closed')
             $(node).addClass('jbfm-opened')
@@ -67,8 +68,6 @@ function jbfilemanager(id, url, rootLabel) {
 
         function onLoaded(nodes) {
 
-            node.getElementsByTagName('UL')[0].innerHTML = ''
-
             for(var i=0; i<nodes.length; i++) {
                 var child = nodes[i]
                 var li = document.createElement('LI')
@@ -101,14 +100,14 @@ function jbfilemanager(id, url, rootLabel) {
         function getNodeType() {
             var classes = node.getElementsByTagName('DIV')[1].className
             var arr = classes.split(' ',5)
-            var class = ''
+            var clazz = ''
             for(var i=0; i<arr.length; i++) {
                 if(arr[i].substr(0,10) == 'jbfm-type-' && arr[i] != 'jbfm-type-default') {
-                    class = arr[i]
+                    clazz = arr[i]
                     break
                 }
             }
-            return class.substr(10,class.length-10)
+            return clazz.substr(10,clazz.length-10)
         }
 
         // build node path as string for ajax request
@@ -146,6 +145,11 @@ function jbfilemanager(id, url, rootLabel) {
         if ($(node).hasClass('jbfm-leaf')) {
             return
         }
+
+        if (node.getElementsByTagName('LI').length) {			
+			switchNodeClass(node)
+			return
+		}
             
         listNode(node)
     })

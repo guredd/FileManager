@@ -11,6 +11,7 @@ public interface IListedItem {
     public static final String FOLDER = "folder";
     public static final String UNKNOWN = "unknown";
     public static final String UNSUPPORTED = "unsupp";
+    public static final String ERROR = "err";
     public String getName();
     public String getType();
     public boolean isExpandable();

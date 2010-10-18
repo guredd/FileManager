@@ -95,9 +95,31 @@
     background-image: url(img/unknown.png);
 }
 
+.jbfm-type-err   {
+    width: 18px;
+    height: 18px;
+    float: left;
+    background-image: url(img/error.png);
+}
+
+
 .jbfm-type-folder   {
     width: 18px;
     height: 18px;
     float: left;
     background-image: url(img/folder.png);
+}
+
+.jbfm-type-zip   {
+    width: 18px;
+    height: 18px;
+    float: left;
+    background-image: url(img/archive.png);
+}
+
+.jbfm-type-jar   {
+    width: 18px;
+    height: 18px;
+    float: left;
+    background-image: url(img/archive.png);
 }

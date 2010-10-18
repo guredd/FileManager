@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class UnsupportedLister implements ILister {
 
-    public IListedItem[] list(String path) {
+    public IListedItem[] list(String type, String path) {
         IListedItem[] result = new IListedItem[1];
         result[0] = new SimpleItem("unsupported container",IListedItem.UNSUPPORTED);
         return result;  

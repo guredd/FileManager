@@ -13,18 +13,23 @@ import java.util.TreeSet;
  */
 public class FolderLister implements ILister {
 
-    public IListedItem[] list(String path) throws IOException {
+    public IListedItem[] list(String type, String path) throws IOException {
         if(path == null) {
             return null;
         }
         File dir = new File(path);
         File[] filesInDir = dir.listFiles();
-        TreeSet<File> set = new TreeSet<File>(DefaultFileComparator.getInstance());
-
-        for(int i=0;i<filesInDir.length;i++) {
-            set.add(filesInDir[i]);
+        if (filesInDir != null) {
+            TreeSet<File> set = new TreeSet<File>(DefaultFileComparator.getInstance());
+            for(int i=0;i<filesInDir.length;i++) {
+                set.add(filesInDir[i]);
+            }
+            return buildList(set);
+        } else {
+            IListedItem[] result = new SimpleItem[1];
+            result[0] = new SimpleItem("server failed to list this dir",IListedItem.ERROR);
+            return result;    
         }
-        return buildList(set);
     }
 
     public void setMode(int mode) {

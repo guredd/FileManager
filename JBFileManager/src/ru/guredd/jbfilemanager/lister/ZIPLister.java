@@ -17,47 +17,71 @@ import java.util.zip.ZipInputStream;
  */
 public class ZIPLister extends FolderLister {
 
-    public IListedItem[] list(String path) throws IOException {
+    public IListedItem[] list(String type, String path) throws IOException {
         if(path == null) {
             return null;
         }
+        int depth;
+        String arr[] = path.split('.' + type + '/');
+        String outpath;
+        String inpath="";
+        if(arr.length == 1) {
+            depth = 1;
+            outpath = path;
+        } else {
+            depth = arr[1].split("/").length + 1;
+            inpath = arr[1];
+            outpath = arr[0] + '.' + type;
+        }
+
         ZipInputStream zis = null;
         TreeSet<ZipEntry> set = null;
 
         try {
-            zis = new ZipInputStream(new FileInputStream(path));
+            zis = new ZipInputStream(new FileInputStream(outpath));
             set = new TreeSet<ZipEntry>(DefaultFileComparator.getInstance());
             ZipEntry ze = null;
 
             while ((ze = zis.getNextEntry()) != null) {
-                set.add(ze);
-                zis.closeEntry();
+                if(ze.getName().split("/").length == depth && ze.getName().startsWith(inpath)) {
+                    set.add(ze);
+                    zis.closeEntry();
+                }
             }            
         } finally {
             if(zis != null) {
                 zis.close();
             }
         }
-
-        return buildList(set);
+        return buildList(inpath,type,set);
     }
 
-    private IListedItem[] buildList(TreeSet<ZipEntry> set) {
+    private IListedItem[] buildList(String inpath, String ziptype, TreeSet<ZipEntry> set) {
         if(set == null) {
             return null;
         }
         Object[] array = set.toArray();
         IListedItem[] result = new SimpleItem[array.length];
+        String name;
         String type;
         ZipEntry z;
         for(int i=0;i<array.length;i++) {
             z = (ZipEntry)array[i];
+            name = z.getName();
+            if(inpath != null && inpath.length() > 0) {
+                name = name.replaceFirst(inpath,"");
+            }
+            if(name.startsWith("/")) {
+                name = name.substring(1,name.length());
+            }
             if(z.isDirectory()) {
-                type = IListedItem.FOLDER;
+                type = ziptype;
+                name = name.substring(0,name.length()-1);
             } else {
                 type = SimpleItem.getTypeByName(z.getName());
             }
-            result[i] = new SimpleItem(z.getName(),type);
+            
+            result[i] = new SimpleItem(name,type);
         }
         return result;
     }

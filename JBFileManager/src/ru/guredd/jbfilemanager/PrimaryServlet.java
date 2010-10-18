@@ -107,7 +107,7 @@ public class PrimaryServlet extends HttpServlet {
                         try {
                             ILister lister = ListerFactory.getLister(type.toLowerCase());
                             if(lister != null) {
-                                IListedItem[] result = lister.list(root.getCanonicalPath()+path);
+                                IListedItem[] result = lister.list(type,root.getCanonicalPath()+path);
                                 String jsonresponse = JSONBuilder.buildItemsList(result);
 			                    resp.setStatus(HttpServletResponse.SC_OK);
 			                    resp.setContentType("text/html;charset=UTF-8");

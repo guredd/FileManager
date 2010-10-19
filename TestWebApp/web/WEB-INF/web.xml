@@ -14,7 +14,7 @@
         </init-param>
         <init-param>
             <param-name>root_path</param-name>
-            <param-value>C:\</param-value>
+            <param-value>E:\IN_TEMP</param-value>
         </init-param>
         <init-param>
             <param-name>details_mode</param-name>
@@ -23,7 +23,7 @@
         <init-param>
             <param-name>sort_mode</param-name>
             <!--possible values: name, size, modified -->   
-            <param-value>name</param-value>
+            <param-value>modified</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>

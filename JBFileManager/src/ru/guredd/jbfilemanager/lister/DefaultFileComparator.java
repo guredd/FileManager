@@ -1,9 +1,6 @@
 package ru.guredd.jbfilemanager.lister;
 
 import java.io.File;
-import java.text.Collator;
-import java.util.Comparator;
-import java.util.Locale;
 import java.util.zip.ZipEntry;
 
 /**
@@ -20,13 +17,13 @@ public class DefaultFileComparator extends AbstractFileComparator {
     private DefaultFileComparator() {
     }
 
-    public static Comparator getInstance() {
+    public static DefaultFileComparator getInstance() {
         return anInstance;
     }
 
     public int compare(Object o1, Object o2) {
 
-        if(o1 instanceof File && o2 instanceof File) {
+         if(o1 instanceof File && o2 instanceof File) {
             File f1 = (File) o1;
             File f2 = (File) o2;
             if(f1.isDirectory() && !f2.isDirectory()) {
@@ -36,11 +33,14 @@ public class DefaultFileComparator extends AbstractFileComparator {
             } else if(f1.isDirectory() && f2.isDirectory()) {
                 return compareByName(f1.getName(),f2.getName());
             }
-            switch(getMode()) {
-                case SORT_NAME: return compareByName(f1.getName(),f2.getName());
-                case SORT_SIZE: return compareBySize(f1.length(),f2.length());
-                case SORT_TIME: return compareByTime(f1.lastModified(),f2.lastModified());
-                default: return 0;
+            if(AbstractFileComparator.SORT_NAME.equals(getMode())) {
+                return compareByName(f1.getName(),f2.getName());
+            } else if (AbstractFileComparator.SORT_SIZE.equals(getMode())) {
+                return compareBySize(f1.length(),f2.length());
+            } else if (AbstractFileComparator.SORT_MODIFIED.equals(getMode())) {
+                return compareByTime(f1.lastModified(),f2.lastModified());
+            } else {
+                return 1;
             }
         } else if(o1 instanceof ZipEntry && o2 instanceof ZipEntry) {
             ZipEntry z1 = (ZipEntry) o1;
@@ -52,14 +52,17 @@ public class DefaultFileComparator extends AbstractFileComparator {
             } else if(z1.isDirectory() && z2.isDirectory()) {
                 return compareByName(z1.getName(),z2.getName());
             }
-            switch(getMode()) {
-                case SORT_NAME: return compareByName(z1.getName(),z2.getName());
-                case SORT_SIZE: return compareBySize(z1.getSize(),z2.getSize());
-                case SORT_TIME: return compareByTime(z1.getTime(),z2.getTime());
-                default: return 0;
+            if(AbstractFileComparator.SORT_NAME.equals(getMode())) {
+                return compareByName(z1.getName(),z2.getName());
+            } else if (AbstractFileComparator.SORT_SIZE.equals(getMode())) {
+                return compareBySize(z1.getSize(),z2.getSize());
+            } else if (AbstractFileComparator.SORT_MODIFIED.equals(getMode())) {
+                return compareByTime(z1.getTime(),z2.getTime());
+            } else {
+                return 1;
             }
         } else {
-            return 0;
+            return 1;
         }
     }
 }

@@ -1,3 +1,4 @@
+/* jbfm.css - CSS file for JBFileManager from Eduard Gurskiy, 2010 */
 
 .jbfm-container {
     padding: 0;
@@ -79,8 +80,9 @@
     background-repeat : no-repeat;
 }
 
-/* File types and folder classes are listed below: */
+/* Item types clases: */
 
+/* Default class for all items: */
 .jbfm-type-default   {
     width: 18px;
     height: 18px;
@@ -88,38 +90,53 @@
     background-image: url(img/unknown.png);
 }
 
+/* Unknown file type(no extension): */
 .jbfm-type-unknown   {
-    width: 18px;
-    height: 18px;
-    float: left;
     background-image: url(img/unknown.png);
 }
 
-.jbfm-type-err   {
-    width: 18px;
-    height: 18px;
-    float: left;
+/* Contents of unsupported containers (rar, etc), returned by UnsupportedLister */
+.jbfm-type-unsupp    {
     background-image: url(img/error.png);
 }
 
+/* Errors in containers: */
+.jbfm-type-err   {
+    background-image: url(img/error.png);
+}
 
+/* Folders: */
 .jbfm-type-folder   {
-    width: 18px;
-    height: 18px;
-    float: left;
     background-image: url(img/folder.png);
 }
 
-.jbfm-type-zip   {
-    width: 18px;
-    height: 18px;
-    float: left;
+/* File types classes are listed below.
+You can add any file types icons, use the following syntax for class:
+
+.jbfm-type-<file extension> {
+    background-image: url(<URL to icon file>);
+}
+
+Put your class in the end of this list.
+Enjoy. :)
+*/
+
+.jbfm-type-zip, .jbfm-type-jar, .jbfm-type-rar, .jbfm-type-7z   {
     background-image: url(img/archive.png);
 }
 
-.jbfm-type-jar   {
-    width: 18px;
-    height: 18px;
-    float: left;
-    background-image: url(img/archive.png);
+.jbfm-type-jpg, .jbfm-type-png, .jbfm-type-gif, .jbfm-type-bmp   {
+    background-image: url(img/pic.png);
+}
+
+.jbfm-type-mp3   {
+    background-image: url(img/mp3.png);
+}
+
+.jbfm-type-wav, .jbfm-type-flac   {
+    background-image: url(img/music.png);
+}
+
+.jbfm-type-avi, .jbfm-type-mpg, .jbfm-type-mkv   {
+    background-image: url(img/video.png);
 }

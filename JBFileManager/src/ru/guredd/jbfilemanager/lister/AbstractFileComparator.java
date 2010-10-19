@@ -13,13 +13,13 @@ import java.util.Locale;
  */
 public abstract class AbstractFileComparator implements Comparator {
 
-    public static final int SORT_NAME = 0;
-    public static final int SORT_SIZE = 1;
-    public static final int SORT_TIME = 2;
+    public static final String SORT_NAME = "name";
+    public static final String SORT_SIZE = "size";
+    public static final String SORT_MODIFIED = "modified";
 
     //TODO: parameterize locale
     private Collator collator = Collator.getInstance(new Locale("ru","RU"));
-    private int mode = 0;
+    private String mode = SORT_NAME;
 
     public abstract int compare(Object o1, Object o2);
     
@@ -27,31 +27,43 @@ public abstract class AbstractFileComparator implements Comparator {
         return collator.compare(name1, name2);
     }
 
+    /**
+     *
+     * Should not return 0, because corresponding files will be considered as equal.
+     *
+     * @param l1
+     * @param l2
+     * @return
+     */
     protected int compareBySize(long l1, long l2) {
-        if(l1 > l2) {
+        if(l1 >= l2) {
             return 1;
-        } else if(l1 < l2) {
-            return -1;
         } else {
-            return 0;
-        }
+            return -1;
+        } 
     }
 
+    /**
+     *
+     * Should not return 0, because corresponding files will be considered as equal.
+     *
+     * @param t1
+     * @param t2
+     * @return
+     */
     protected int compareByTime(long t1, long t2) {
-        if(t1 > t2) {
-            return 1;
-        } else if(t1 < t2) {
+        if(t1 >= t2) {
             return -1;
         } else {
-            return 0;
-        }
+            return 1;
+        } 
     }
 
-    public int getMode() {
+    public String getMode() {
         return mode;
     }
 
-    public void setMode(int mode) {
+    public void setMode(String mode) {
         this.mode = mode;
     }
 }

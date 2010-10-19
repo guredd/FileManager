@@ -34,7 +34,7 @@ public class SimpleItem implements IListedItem {
     }
 
     public boolean isExpandable() {
-        return ListerFactory.hasType(type);
+        return ListerLocator.hasType(type);
     }
 
     public static String getTypeByName(String name) {

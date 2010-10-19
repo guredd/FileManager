@@ -1,10 +1,5 @@
-/**
- * Created by IntelliJ IDEA.
- * User: guredd
- * Date: 10.10.2010
- * Time: 17:01:33
- * To change this template use File | Settings | File Templates.
- */
+/* jbfm.js - JS file for JBFileManager from Eduard Gurskiy, 2010 */
+
 function jbfilemanager(id, url, rootLabel) {
 
     // show root node:
@@ -18,6 +13,7 @@ function jbfilemanager(id, url, rootLabel) {
     rootLI.innerHTML += '<ul class="jbfm-container"></ul>'
     rootUL.appendChild(rootLI)   
 
+    // switch between expanded/collapsed states:
     function switchNodeClass(node) {
         if($(node).hasClass('jbfm-opened')) {
             $(node).removeClass('jbfm-opened')
@@ -29,43 +25,46 @@ function jbfilemanager(id, url, rootLabel) {
         }
     }
 
+    // build node path as string for ajax request:
+    function buildNodePath(node) {
+        var inode = node
+        var path = ''
+        while (!$(inode).hasClass('jbfm-root')) {
+            path = '/' + inode.getElementsByTagName('DIV')[2].innerHTML + path
+            inode = inode.parentNode.parentNode
+        }
+        return path
+    }
+
+    // list node contents:
     function listNode(node) {
 
+        // ajax successful callback:
         var onSuccess = function(data) {
-            if (!data.errcode) {
-                onLoaded(data.nodes)
-                showProgress(false)
-            } else {
-                showProgress(false)
-                onLoadError(data)
-            }
-        }
-
-        var onAjaxError = function(xhr, status) {
+            onLoaded(data.nodes)
             showProgress(false)
-            var errinfo = { errcode: status }
-            if (xhr.status != 200) {
-                // может быть статус 200, а ошибка
-                // из-за некорректного JSON
-                errinfo.message = xhr.statusText
-            } else {
-                errinfo.message = 'Некорректные данные с сервера'
-            }
-            onLoadError(errinfo)
         }
 
-        var onLoadError = function(error) {
-            var msg = "Error "+error.errcode
-            if (error.message) msg = msg + ' :'+error.message
+        // ajax error callback:
+        var onError = function(xhr, status) {
+            showProgress(false)
+            var text
+            if (xhr.status != 200) {
+                text = xhr.responseText
+            } else {
+                text = 'Incorrect data received!'
+            }
+            var msg = "Error " + status  + ' : ' + text
             alert(msg)
         }
 
-
+        // show/hide animated progress:
         function showProgress(on) {
             var expand = node.getElementsByTagName('DIV')[0]
             expand.className = on ? 'jbfm-progress' : 'jbfm-expand'
         }
 
+        // render node contents from JSON result:
         function onLoaded(nodes) {
 
             for(var i=0; i<nodes.length; i++) {
@@ -90,13 +89,15 @@ function jbfilemanager(id, url, rootLabel) {
                     li.innerHTML += '<ul class="jbfm-container"></ul>'
                 }
                 node.getElementsByTagName('UL')[0].appendChild(li)
-            }
 
-            node.isLoaded = true
+                if(child.isexp == "true") {
+                    listNode(li)
+                }
+            }            
             switchNodeClass(node)
         }
 
-        // get node type from associated jbfm-type-... class
+        // get node type from associated jbfm-type-... class:
         function getNodeType() {
             var classes = node.getElementsByTagName('DIV')[1].className
             var arr = classes.split(' ',5)
@@ -110,29 +111,20 @@ function jbfilemanager(id, url, rootLabel) {
             return clazz.substr(10,clazz.length-10)
         }
 
-        // build node path as string for ajax request
-        function buildNodePath() {
-            var inode = node
-            var path = ''
-            while(!$(inode).hasClass('jbfm-root')) {
-                path = '/' + inode.getElementsByTagName('DIV')[2].innerHTML + path
-                inode = inode.parentNode.parentNode
-            }
-            return path
-        }
-
         showProgress(true)
 
+        // request node contents from server:
         $.ajax({
             url: url,
-            data: {op:"list",type:getNodeType(),path:buildNodePath()},
+            data: {op:"list",type:getNodeType(),path:encodeURIComponent(buildNodePath(node))},
             dataType: "json",
             success: onSuccess,
-            error: onAjaxError,
+            error: onError,
             cache: false
         })
     }
 
+    //register onclick callback for whole tree:
     $(rootUL).click(function(event) {
         event = event || window.event
         var clickedElem = event.target || event.srcElement
@@ -146,11 +138,22 @@ function jbfilemanager(id, url, rootLabel) {
             return
         }
 
-        if (node.getElementsByTagName('LI').length) {			
-			switchNodeClass(node)
-			return
+        if (node.getElementsByTagName('LI').length) {
+
+            switchNodeClass(node)
+
+            $.ajax({
+            url: url,
+            data: {op:"unlist",path:encodeURIComponent(buildNodePath(node))},
+            dataType: "json",          
+            cache: false
+            })
+
+            return
 		}
-            
         listNode(node)
     })
+
+    //list root node after initialization:
+    listNode(rootLI)
 }

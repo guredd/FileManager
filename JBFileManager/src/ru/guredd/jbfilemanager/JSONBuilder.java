@@ -2,6 +2,8 @@ package ru.guredd.jbfilemanager;
 
 import ru.guredd.jbfilemanager.lister.IListedItem;
 
+import javax.servlet.http.HttpSession;
+
 /**
  * Created by IntelliJ IDEA.
  * User: guredd
@@ -15,8 +17,9 @@ public class JSONBuilder {
     private static final String NODE_NAME = "name";
     private static final String NODE_TYPE = "type";
     private static final String NODE_EXPANDABLE = "exp";
+    private static final String IS_EXPANDED = "isexp";
 
-    public static String buildItemsList(IListedItem[] items) {
+    public static String buildItemsList(IListedItem[] items, String path, HttpSession session) {
         StringBuffer buf = new StringBuffer("{\"" + NODES + "\":[");
         if(items != null) {
             for(int i=0;i<items.length;i++) {
@@ -25,8 +28,14 @@ public class JSONBuilder {
                 buf.append("\",\"" + NODE_TYPE + "\":\"");
                 buf.append(items[i].getType());
                 buf.append("\",\"" + NODE_EXPANDABLE + "\":\"");
-                buf.append(items[i].isExpandable());
+                buf.append(items[i].isExpandable());               
+
+                if(HttpSessionTreePersistence.isExpanded(path + '/' + items[i].getName(),session)) {
+                    buf.append("\",\"" + IS_EXPANDED + "\":\"");
+                    buf.append("true");
+                }
                 buf.append("\"}");
+
                 if(i != items.length-1) {
                     buf.append(',');
                 }

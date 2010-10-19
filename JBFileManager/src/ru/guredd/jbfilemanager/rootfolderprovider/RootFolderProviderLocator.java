@@ -10,7 +10,7 @@ import java.util.Properties;
  * Time: 22:50:54
  * To change this template use File | Settings | File Templates.
  */
-public final class RootFolderProviderFactory {
+public final class RootFolderProviderLocator {
 
     private static boolean initialized = false;
     private static IRootFolderProvider rootFolderProvider = null;

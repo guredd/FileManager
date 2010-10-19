@@ -44,8 +44,12 @@ public class ZIPLister extends FolderLister {
 
             while ((ze = zis.getNextEntry()) != null) {
                 if(ze.getName().split("/").length == depth && ze.getName().startsWith(inpath)) {
-                    set.add(ze);
+                    //ZipEntry zecopy = new ZipEntry(ze.getName());
+                    //zecopy.setSize(ze.getSize());
+                    //zecopy.setTime(ze.getTime());
+                    //set.add(zecopy);
                     zis.closeEntry();
+                    set.add(ze);
                 }
             }            
         } finally {

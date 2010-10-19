@@ -13,7 +13,7 @@ import java.util.Properties;
  * Time: 20:59:56
  * To change this template use File | Settings | File Templates.
  */
-public final class ListerFactory {
+public final class ListerLocator {
 
     private static Map<String,ILister> listers = new HashMap<String,ILister>();
     private static boolean initialized = false;

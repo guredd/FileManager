@@ -1,22 +1,25 @@
 package ru.guredd.jbfilemanager.lister;
 
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.TreeSet;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 /**
- * Created by IntelliJ IDEA.
- * User: guredd
- * Date: 11.10.2010
- * Time: 1:39:03
- * To change this template use File | Settings | File Templates.
+ * JBFileManager from Eduard Gurskiy, 2010
+ *
+ * ZIP archives lister.
  */
 public class ZIPLister extends FolderLister {
 
+    /**
+     * Lists specified zip archive.
+     * @param type container type
+     * @param path zip archive path
+     * @return array of items inside specified archive
+     * @throws IOException in case of error
+     */
     public IListedItem[] list(String type, String path) throws IOException {
         if(path == null) {
             return null;
@@ -44,10 +47,6 @@ public class ZIPLister extends FolderLister {
 
             while ((ze = zis.getNextEntry()) != null) {
                 if(ze.getName().split("/").length == depth && ze.getName().startsWith(inpath)) {
-                    //ZipEntry zecopy = new ZipEntry(ze.getName());
-                    //zecopy.setSize(ze.getSize());
-                    //zecopy.setTime(ze.getTime());
-                    //set.add(zecopy);
                     zis.closeEntry();
                     set.add(ze);
                 }
@@ -60,6 +59,13 @@ public class ZIPLister extends FolderLister {
         return buildList(inpath,type,set);
     }
 
+    /**
+     * Builds items array from sorted set of zip entries.
+     * @param inpath path to zip container
+     * @param ziptype type of zip container
+     * @param set set of zip entries
+     * @return array of items
+     */
     private IListedItem[] buildList(String inpath, String ziptype, TreeSet<ZipEntry> set) {
         if(set == null) {
             return null;
@@ -69,6 +75,7 @@ public class ZIPLister extends FolderLister {
         String name;
         String type;
         ZipEntry z;
+        ZIPSimpleItem zitem;
         for(int i=0;i<array.length;i++) {
             z = (ZipEntry)array[i];
             name = z.getName();
@@ -81,11 +88,14 @@ public class ZIPLister extends FolderLister {
             if(z.isDirectory()) {
                 type = ziptype;
                 name = name.substring(0,name.length()-1);
+                zitem = new ZIPSimpleItem(name,type);
+                zitem.setDirectory(true);
             } else {
                 type = SimpleItem.getTypeByName(z.getName());
+                zitem = new ZIPSimpleItem(name,type);
             }
             
-            result[i] = new SimpleItem(name,type);
+            result[i] = zitem;
         }
         return result;
     }

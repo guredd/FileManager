@@ -9,23 +9,33 @@
         <servlet-name>JBFileManager</servlet-name>
         <servlet-class>ru.guredd.jbfilemanager.PrimaryServlet</servlet-class>
         <init-param>
-            <param-name>root_folder_provider</param-name>
+            <!--defines the class which provides root folder for file manager
+            you can specify your own implementation of ru.guredd.jbfilemanager.rootfolderprovider.IRootFolderProvider -->
+            <param-name>root_folder_provider</param-name>			
             <param-value>ru.guredd.jbfilemanager.rootfolderprovider.FixedRootFolderProvider</param-value>
         </init-param>
         <init-param>
+            <!--defines static root folder (only for FixedRootFolderProvider)-->
             <param-name>root_path</param-name>
-            <param-value>E:\IN_TEMP</param-value>
+            <param-value>C:\</param-value>
         </init-param>
         <init-param>
+            <!--defines detalization mode for listers,
+            must be supported by all used listers
+            0 - simple
+            1 - complex (not supported by predefined listers)
+            -->
             <param-name>details_mode</param-name>
             <param-value>0</param-value>
         </init-param>
         <init-param>
-            <param-name>sort_mode</param-name>
-            <!--possible values: name, size, modified -->   
-            <param-value>modified</param-value>
+            <!--defines sort mode for listers output,
+            possible values: name, size, modified -->
+            <param-name>sort_mode</param-name>            
+            <param-value>name</param-value>
         </init-param>
     </servlet>
+	
     <servlet-mapping>
         <servlet-name>JBFileManager</servlet-name>
         <url-pattern>/jbfm</url-pattern>

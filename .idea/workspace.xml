@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+    <option name="SCOPE_TYPE" value="4" />
+  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="JBFileManager:jar" />
@@ -7,16 +11,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="bdf6b3ac-9b46-4217-8bbe-958a56310d78" name="Default" comment="second commit">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestWebApp/web/jbfm.js" afterPath="$PROJECT_DIR$/TestWebApp/web/jbfm.js" />
-      <change type="MOVED" beforePath="E:\Develop\JetBrains FileManager\projects\JBFileManager\src\ru\guredd\jbfilemanager\rootfolderprovider\RootFolderProviderFactory.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/RootFolderProviderLocator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/IRootFolderProvider.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/IRootFolderProvider.java" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\closed.gif" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/DefaultFileComparator.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/DefaultFileComparator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/SimpleItem.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/SimpleItem.java" />
-      <change type="MOVED" beforePath="E:\Develop\JetBrains FileManager\projects\JBFileManager\src\ru\guredd\jbfilemanager\lister\ListerFactory.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ListerLocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ZIPLister.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ZIPLister.java" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\expand_leaf.gif" afterPath="" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\jbfm.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\i.gif" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/AbstractFileComparator.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/AbstractFileComparator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestWebApp/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/TestWebApp/web/WEB-INF/web.xml" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\expand_minus.gif" afterPath="" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\video.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/IListedItem.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/IListedItem.java" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\i_half.gif" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/UnsupportedLister.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/UnsupportedLister.java" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\pic.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/SimpleItem.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/SimpleItem.java" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\unknown.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ZIPLister.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ZIPLister.java" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\ajax-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\document.gif" afterPath="" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\folder.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/RootFolderProviderLocator.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/RootFolderProviderLocator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ILister.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ILister.java" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\jbfm.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\jquery-1.4.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\error.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/FolderLister.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/FolderLister.java" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\music.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/JSONBuilder.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/JSONBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestWebApp/web/jbfm.css" afterPath="$PROJECT_DIR$/TestWebApp/web/jbfm.css" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\expand_plus.gif" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestWebApp/web/index.jsp" afterPath="$PROJECT_DIR$/TestWebApp/web/index.jsp" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\archive.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\Develop\JetBrains FileManager\projects\TestWebApp\web\img\mp3.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestWebApp/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/TestWebApp/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/HttpSessionTreePersistence.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/HttpSessionTreePersistence.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ListerLocator.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ListerLocator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/FixedRootFolderProvider.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/FixedRootFolderProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/PrimaryServlet.java" afterPath="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/PrimaryServlet.java" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -77,37 +106,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PrimaryServlet.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/PrimaryServlet.java">
+      <file leaf-file-name="ZIPSimpleItem.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ZIPSimpleItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="19" selection-start="8379" selection-end="8379" vertical-scroll-proportion="0.8521739">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jbfm.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestWebApp/web/jbfm.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="32" selection-start="2681" selection-end="2681" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UnsupportedLister.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/UnsupportedLister.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="31" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleItem.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/SimpleItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="11" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0">
+            <state line="2" column="0" selection-start="41" selection-end="127" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,16 +118,76 @@
       <file leaf-file-name="IListedItem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/IListedItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="52" selection-start="376" selection-end="382" vertical-scroll-proportion="0.0">
+            <state line="38" column="7" selection-start="767" selection-end="850" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jbfm.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestWebApp/web/jbfm.js">
+      <file leaf-file-name="SimpleItem.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/SimpleItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="61" selection-start="3420" selection-end="3420" vertical-scroll-proportion="0.0">
+            <state line="22" column="10" selection-start="324" selection-end="413" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractFileComparator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/AbstractFileComparator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="92" selection-start="1016" selection-end="1069" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultFileComparator.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/DefaultFileComparator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="51" selection-start="823" selection-end="823" vertical-scroll-proportion="1.5217391">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ILister.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ILister.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="31" selection-start="715" selection-end="795" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FolderLister.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/FolderLister.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="11" selection-start="1487" selection-end="1611" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZIPLister.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ZIPLister.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="196" selection-end="273" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnsupportedLister.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/UnsupportedLister.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="41" selection-end="194" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -134,26 +196,10 @@
       <file leaf-file-name="ListerLocator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ListerLocator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="19" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RootFolderProviderLocator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/RootFolderProviderLocator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="19" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FixedRootFolderProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/FixedRootFolderProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="13" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="8" column="0" selection-start="177" selection-end="254" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,22 +219,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/PrimaryServlet.java" />
+        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/JSONBuilder.java" />
+        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/HttpSessionTreePersistence.java" />
+        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/IRootFolderProvider.java" />
+        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/RootFolderProviderLocator.java" />
+        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/FixedRootFolderProvider.java" />
+        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/IListedItem.java" />
+        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/SimpleItem.java" />
+        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ZIPSimpleItem.java" />
+        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ILister.java" />
         <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/FolderLister.java" />
+        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ZIPLister.java" />
         <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/UnsupportedLister.java" />
         <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ListerLocator.java" />
-        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/RootFolderProviderLocator.java" />
-        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/treepersistence/ITreePersistence.java" />
-        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/treepersistence/SessionTreePersistence.java" />
-        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/SessionTreePersistence.java" />
-        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/HttpSessionTreePersistence.java" />
-        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/JSONBuilder.java" />
-        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/DefaultFileComparator.java" />
-        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ZIPLister.java" />
         <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/AbstractFileComparator.java" />
-        <option value="$PROJECT_DIR$/TestWebApp/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/TestWebApp/web/jbfm.js" />
-        <option value="$PROJECT_DIR$/TestWebApp/web/jbfm.css" />
-        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/PrimaryServlet.java" />
+        <option value="$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/DefaultFileComparator.java" />
       </list>
     </option>
   </component>
@@ -234,24 +280,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="All">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JBFileManager">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JBFileManager">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -322,96 +350,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JBFileManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jbfilemanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JBFileManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jbfilemanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rootfolderprovider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JBFileManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jbfilemanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lister" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JBFileManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JBFileManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane">
@@ -429,6 +367,24 @@
         </subPane>
       </pane>
       <pane id="Favorites" />
+      <pane id="Scope">
+        <subPane subId="All">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="JBFileManager">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="JBFileManager">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -459,7 +415,7 @@
       <recent name="E:\Develop\JetBrains FileManager\projects\JBFileManager\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.default JavaScript">
+  <component name="RunManager" selected="Tomcat Server.default">
     <configuration default="true" type="PhpRunConfigurationType" factoryName="PHP">
       <method>
         <option name="AntTarget" enabled="false" />
@@ -533,7 +489,7 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="AirRunConfigurationType" factoryName="AIR">
+    <configuration default="true" type="AirRunConfigurationType" factoryName="AIR" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" html_or_swf_file_path="" main_class_name="" module_name="" run_mode="HtmlOrSwfFile" url_to_launch="http://">
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -640,7 +596,7 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method>
@@ -756,12 +712,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26291618" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49138921" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35706085" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -771,12 +728,11 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27423313" sideWeight="0.23880596" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27423313" sideWeight="0.72904706" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27423313" sideWeight="0.50057405" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -817,16 +773,108 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ZIPLister.java">
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/PrimaryServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="30" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.0">
+        <state line="20" column="14" selection-start="487" selection-end="563" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/JSONBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="126" selection-end="216" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/DefaultFileComparator.java">
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/HttpSessionTreePersistence.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="2115" selection-end="2115" vertical-scroll-proportion="0.0">
+        <state line="52" column="54" selection-start="1610" selection-end="1610" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/RootFolderProviderLocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="51" selection-start="1849" selection-end="1849" vertical-scroll-proportion="0.7484587">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/IRootFolderProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="41" selection-start="606" selection-end="731" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/FixedRootFolderProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="173" selection-end="335" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/SimpleItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="10" selection-start="324" selection-end="413" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ILister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="31" selection-start="715" selection-end="795" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ZIPSimpleItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="41" selection-end="127" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/IListedItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="7" selection-start="767" selection-end="850" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/FolderLister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="11" selection-start="1487" selection-end="1611" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ZIPLister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="196" selection-end="273" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/UnsupportedLister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="41" selection-end="194" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ListerLocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="177" selection-end="254" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -835,108 +883,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/AbstractFileComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="19" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="41" column="92" selection-start="1016" selection-end="1069" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestWebApp/web/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/DefaultFileComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="755" selection-end="755" vertical-scroll-proportion="-8.5">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/IRootFolderProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="452" selection-end="452" vertical-scroll-proportion="0.5107296">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/FolderLister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/IListedItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="52" selection-start="376" selection-end="382" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/UnsupportedLister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="31" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/SimpleItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="11" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestWebApp/web/jbfm.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="32" selection-start="2681" selection-end="2681" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestWebApp/web/jbfm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="61" selection-start="3420" selection-end="3420" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/lister/ListerLocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="19" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/RootFolderProviderLocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="19" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/rootfolderprovider/FixedRootFolderProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/J2SDK/src.zip!/java/io/InputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="22" selection-start="818" selection-end="818" vertical-scroll-proportion="0.3322034">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JBFileManager/src/ru/guredd/jbfilemanager/PrimaryServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="19" selection-start="8379" selection-end="8379" vertical-scroll-proportion="0.8521739">
-          <folding />
+        <state line="35" column="51" selection-start="823" selection-end="823" vertical-scroll-proportion="1.5217391">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

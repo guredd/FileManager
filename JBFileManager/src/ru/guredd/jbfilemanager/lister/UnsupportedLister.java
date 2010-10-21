@@ -1,23 +1,28 @@
 package ru.guredd.jbfilemanager.lister;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * Created by IntelliJ IDEA.
- * User: guredd
- * Date: 14.10.2010
- * Time: 22:38:27
- * To change this template use File | Settings | File Templates.
+ * JBFileManager from Eduard Gurskiy, 2010
+ *
+ * Unsupported containers lister. Returns always single item informing about unsupported container.
  */
 public class UnsupportedLister implements ILister {
 
+    /**
+     * Lists unsupported container.
+     * @param type container type
+     * @param path container path
+     * @return array of items inside specified container, will be always one item
+     */
     public IListedItem[] list(String type, String path) {
         IListedItem[] result = new IListedItem[1];
-        result[0] = new SimpleItem("unsupported container",IListedItem.UNSUPPORTED);
-        return result;  
+        result[0] = new SimpleItem("unsupported container", IListedItem.UNSUPPORTED);
+        return result;
     }
 
+    /**
+     * Nothing doing. For interface compatibility.
+     * @param mode nothing
+     */
     public void setMode(int mode) {
         //nothing
     }

@@ -5,14 +5,19 @@ import java.io.IOException;
 import java.util.TreeSet;
 
 /**
- * Created by IntelliJ IDEA.
- * User: guredd
- * Date: 11.10.2010
- * Time: 1:36:45
- * To change this template use File | Settings | File Templates.
+ * JBFileManager from Eduard Gurskiy, 2010
+ *
+ * Folder lister.
  */
 public class FolderLister implements ILister {
 
+    /**
+     * Lists specified folder.
+     * @param type container type, should be folder
+     * @param path folder path
+     * @return array of items inside specified folder
+     * @throws IOException in case of error
+     */
     public IListedItem[] list(String type, String path) throws IOException {
         if(path == null) {
             return null;
@@ -27,17 +32,26 @@ public class FolderLister implements ILister {
             return buildList(set);
         } else {
             IListedItem[] result = new SimpleItem[1];
-            result[0] = new SimpleItem("server failed to list this dir",IListedItem.ERROR);
+            result[0] = new SimpleItem("server has failed to list this dir",IListedItem.ERROR);
             return result;    
         }
     }
 
+    /**
+     * Sets lister detalisation mode. Only simple mode is supported.
+     * @param mode mode to set
+     */
     public void setMode(int mode) {
         if(mode != ILister.PREDEFINED_SIMPLE_MODE) {
             throw new UnsupportedOperationException("only PREDEFINED_SIMPLE_MODE(0) is supported");
         }
     }
 
+    /**
+     * Builds items array from sorted set of files.
+     * @param set set of files
+     * @return array of items
+     */
     private IListedItem[] buildList(TreeSet<File> set) {
         if(set == null) {
             return null;

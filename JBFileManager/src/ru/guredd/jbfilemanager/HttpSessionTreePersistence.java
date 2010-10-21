@@ -5,16 +5,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by IntelliJ IDEA.
- * User: guredd
- * Date: 19.10.2010
- * Time: 16:42:44
- * To change this template use File | Settings | File Templates.
+ * JBFileManager from Eduard Gurskiy, 2010
+ *
+ * Class responsible for persistence of JBFM tree state via HTTP session.
  */
 public class HttpSessionTreePersistence {
 
+    /**
+     * Name of HTTP session attribute, where to store expanded path.
+     */
     private static final String EXPANDED_NODES = "jbfm_expanded_nodes";
 
+    /**
+     * Creates array of expanded paths as HTTP session attribute.
+     * @param session current HTTP session
+     * @return array of expanded paths stored in HTTP session
+     */
     private static List<String> createExpandedNodes(HttpSession session) {
         if(session != null) {
             List<String> expNodes = new ArrayList<String>();
@@ -25,6 +31,11 @@ public class HttpSessionTreePersistence {
         }
     }
 
+    /**
+     * Adds expanded path to array stored in HTTP session.
+     * @param path path to add
+     * @param session current HTTP session
+     */
     public static void addExpandedPath(String path, HttpSession session) {
         if(session == null) {
             return;
@@ -41,6 +52,11 @@ public class HttpSessionTreePersistence {
         }        
     }
 
+    /**
+     * Removes expanded path from array stored in HTTP session.
+     * @param path path to remove
+     * @param session current HTTP session
+     */
     public static void removeExpandedPath(String path, HttpSession session) {
         if(session == null) {
             return;
@@ -51,6 +67,12 @@ public class HttpSessionTreePersistence {
         }
     }
 
+    /**
+     * Checks if specified path was already expanded.
+     * @param path path to check
+     * @param session current HTTP session
+     * @return true if path was already expanded during specified session, otherwise - false
+     */
     public static boolean isExpanded(String path, HttpSession session) {
         if(session == null) {
             return false;

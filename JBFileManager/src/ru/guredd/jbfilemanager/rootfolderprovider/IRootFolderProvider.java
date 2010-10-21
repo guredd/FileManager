@@ -3,17 +3,29 @@ package ru.guredd.jbfilemanager.rootfolderprovider;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.util.List;
-import java.util.Properties;
 
 /**
- * Created by IntelliJ IDEA.
- * User: guredd
- * Date: 09.10.2010
- * Time: 13:23:17
- * To change this template use File | Settings | File Templates.
+ * JBFileManager from Eduard Gurskiy, 2010
+ *
+ * Interface for root folder providers.
  */
 public interface IRootFolderProvider {
+    /**
+     * Initializes root folder provider.
+     * @param objs configuration objects (ServletConfig and ServletContext)
+     */
     public void initialize(List objs);
+
+    /**
+     * Checks if root folder provider is initialized.
+     * @return true if initialized, otherwise false
+     */
     public boolean isInitialized();
+
+    /**
+     * Provides root folder.
+     * @param session current HTTP session
+     * @return root folder as File object
+     */
     public File getRootFolder(HttpSession session);
 }

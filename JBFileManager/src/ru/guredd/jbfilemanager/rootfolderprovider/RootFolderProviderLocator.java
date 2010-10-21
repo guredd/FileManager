@@ -1,20 +1,27 @@
 package ru.guredd.jbfilemanager.rootfolderprovider;
 
 import java.util.List;
-import java.util.Properties;
 
 /**
- * Created by IntelliJ IDEA.
- * User: guredd
- * Date: 09.10.2010
- * Time: 22:50:54
- * To change this template use File | Settings | File Templates.
+ * JBFileManager from Eduard Gurskiy, 2010
+ *
+ * Locator for root folder provider.
  */
 public final class RootFolderProviderLocator {
 
+    /**
+     * Initialization flag.
+     */
     private static boolean initialized = false;
+    /**
+     * Single root folder provider.
+     */
     private static IRootFolderProvider rootFolderProvider = null;
 
+    /**
+     * Provides instance of root folder provider.
+     * @return root folder provider
+     */
     public synchronized static IRootFolderProvider getRootFolderProvider() {
         if(initialized) {
             return rootFolderProvider;
@@ -23,6 +30,14 @@ public final class RootFolderProviderLocator {
         }
     }
 
+    /**
+     * Instantiates anf initializes configured root folder provider.
+     * @param className class name for root folder provider
+     * @param objs configuration objects
+     * @throws IllegalAccessException in case of error
+     * @throws InstantiationException in case of error
+     * @throws ClassNotFoundException in case of error
+     */
     public synchronized static void initialize(String className, List objs) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
         initialized = false;
         rootFolderProvider = null;
@@ -38,6 +53,10 @@ public final class RootFolderProviderLocator {
         }
     }
 
+    /**
+     * Checks if locator was initialized.
+     * @return true if initialized, otherwise false
+     */
     public static boolean isInitialized() {
         return initialized;
     }

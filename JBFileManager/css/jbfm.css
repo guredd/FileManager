@@ -1,0 +1,145 @@
+/* jbfm.css - CSS file for JBFileManager from Eduard Gurskiy, 2010 */
+
+.jbfm-container {
+    padding: 0;
+    margin: 0;
+}
+
+.jbfm-container li {
+    list-style-type: none;
+}
+
+/* indent for all tree children excepts root */
+.jbfm-node {
+    background-image : url(#JBFM_URL#?op=img&name=i.gif);
+    background-position : top left;
+    background-repeat : repeat-y;
+    margin-left: 18px;
+    zoom: 1;
+}
+
+.jbfm-root {
+    margin-left: 0;
+}
+
+/* left vertical line (grid) for all nodes */
+.jbfm-last {
+    background-image: url(#JBFM_URL#?op=img&name=i_half.gif);
+    background-repeat : no-repeat;
+}
+
+.jbfm-opened .jbfm-expand {
+    background-image: url(#JBFM_URL#?op=img&name=expand_minus.gif);
+}
+
+/* closed is higher priority than open */
+.jbfm-closed .jbfm-expand {
+    background-image: url(#JBFM_URL#?op=img&name=expand_plus.gif);
+}
+
+/* highest priority */
+.jbfm-leaf .jbfm-expand {
+    background-image: url(#JBFM_URL#?op=img&name=expand_leaf.gif);
+}
+
+.jbfm-name {
+    min-height: 18px;
+    margin-left:18px;
+}
+
+* html .jbfm-name {
+    height: 18px;
+}
+
+.jbfm-expand {
+    width: 18px;
+    height: 18px;
+    float: left;
+}
+
+.jbfm-opened .jbfm-container {
+    display: block;
+}
+
+.jbfm-closed .jbfm-container {
+    display: none;
+}
+
+.jbfm-opened .jbfm-expand, .jbfm-closed .jbfm-expand {
+    cursor: pointer;
+}
+.jbfm-leaf .jbfm-expand {
+    cursor: auto;
+}
+
+.jbfm-progress   {
+    width: 18px;
+    height: 18px;
+    float: left;
+    background-image: url(#JBFM_URL#?op=img&name=ajax-loader.gif);
+    background-repeat : no-repeat;
+}
+
+/* Item types clases: */
+
+/* Default class for all items: */
+.jbfm-type-default   {
+    width: 18px;
+    height: 18px;
+    float: left;
+    background-image: url(#JBFM_URL#?op=img&name=unknown.png);
+}
+
+/* Unknown file type(no extension): */
+.jbfm-type-unknown   {
+    background-image: url(#JBFM_URL#?op=img&name=unknown.png);
+}
+
+/* Contents of unsupported containers (rar, etc), returned by UnsupportedLister */
+.jbfm-type-unsupp    {
+    background-image: url(#JBFM_URL#?op=img&name=error.png);
+}
+
+/* Errors in containers: */
+.jbfm-type-err   {
+    background-image: url(#JBFM_URL#?op=img&name=error.png);
+}
+
+/* Folders: */
+.jbfm-type-folder   {
+    background-image: url(#JBFM_URL#?op=img&name=folder.png);
+}
+
+/* File types classes are listed below.
+You can add any file types icons, use the following syntax for class:
+
+.jbfm-type-<file extension> {
+    background-image: url(<URL to icon file>);
+}
+
+#JBFM_URL# is replaced by JBFM servlet URL at runtime. 
+It can be used if you pack your images inside JBFM jar server.
+
+Put your class in the end of this list.
+Enjoy. :)
+*/
+
+.jbfm-type-zip, .jbfm-type-jar, .jbfm-type-rar, .jbfm-type-7z   {
+    background-image: url(#JBFM_URL#?op=img&name=archive.png);
+}
+
+.jbfm-type-jpg, .jbfm-type-png, .jbfm-type-gif, .jbfm-type-bmp   {
+    background-image: url(#JBFM_URL#?op=img&name=pic.png);
+}
+
+.jbfm-type-mp3   {
+    background-image: url(#JBFM_URL#?op=img&name=mp3.png);
+}
+
+.jbfm-type-wav, .jbfm-type-flac   {
+    background-image: url(#JBFM_URL#?op=img&name=music.png);
+}
+
+.jbfm-type-avi, .jbfm-type-mpg, .jbfm-type-mkv   {
+    background-image: url(#JBFM_URL#?op=img&name=video.png);
+}

@@ -4,23 +4,37 @@ import java.io.File;
 import java.util.zip.ZipEntry;
 
 /**
- * Created by IntelliJ IDEA.
- * User: guredd
- * Date: 14.10.2010
- * Time: 21:44:40
- * To change this template use File | Settings | File Templates.
+ * JBFileManager from Eduard Gurskiy, 2010
+ *
+ * Default comparator for files.
  */
 public class DefaultFileComparator extends AbstractFileComparator {
 
+    /**
+     * The only singletone instance.
+     */
     private static DefaultFileComparator anInstance = new DefaultFileComparator();
-    
+
+    /**
+     * Restricted constructor.
+     */
     private DefaultFileComparator() {
     }
 
+    /**
+     * @return single instance of itself
+     */
     public static DefaultFileComparator getInstance() {
         return anInstance;
     }
 
+    /**
+     * Compares 2 files or zip entries.
+     * Used to sort item lists returned by listers.
+     * @param o1 file1
+     * @param o2 file2
+     * @return 1 if file1>=file2, -1 if file1<file2
+     */
     public int compare(Object o1, Object o2) {
 
          if(o1 instanceof File && o2 instanceof File) {

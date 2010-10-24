@@ -7,11 +7,12 @@ import java.util.Locale;
 /**
  * Copyright 2010 Eduard Gurskiy. All rights reserved.
  * License BSD. Use is subject to license terms.
- * @author Eduard Gurskiy
- *
+ * <br>
  * JBFileManager
- *
+ * <br>
  * Abstract comparator for files.
+ *
+ * @author Eduard Gurskiy
  */
 public abstract class AbstractFileComparator implements Comparator {
 

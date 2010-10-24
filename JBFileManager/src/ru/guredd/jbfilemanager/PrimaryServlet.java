@@ -17,11 +17,12 @@ import java.util.Properties;
 /**
  * Copyright 2010 Eduard Gurskiy. All rights reserved.
  * License BSD. Use is subject to license terms.
- * @author Eduard Gurskiy
- *
+ * <br>
  * JBFileManager
- *
+ * <br>
  * Main Servlet class.
+ *
+ * @author Eduard Gurskiy
  */
 public class PrimaryServlet extends HttpServlet {
 

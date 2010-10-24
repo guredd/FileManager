@@ -6,11 +6,12 @@ import java.util.zip.ZipEntry;
 /**
  * Copyright 2010 Eduard Gurskiy. All rights reserved.
  * License BSD. Use is subject to license terms.
- * @author Eduard Gurskiy
- *
+ * <br>
  * JBFileManager
- *
+ * <br>
  * Default comparator for files.
+ *
+ * @author Eduard Gurskiy
  */
 public class DefaultFileComparator extends AbstractFileComparator {
 

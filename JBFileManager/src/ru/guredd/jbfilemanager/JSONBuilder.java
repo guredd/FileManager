@@ -7,11 +7,12 @@ import javax.servlet.http.HttpSession;
 /**
  * Copyright 2010 Eduard Gurskiy. All rights reserved.
  * License BSD. Use is subject to license terms.
- * @author Eduard Gurskiy
- *
+ * <br>
  * JBFileManager
- *
+ * <br>
  * JSON builder for listers results.
+ *
+ * @author Eduard Gurskiy
  */
 public class JSONBuilder {
 

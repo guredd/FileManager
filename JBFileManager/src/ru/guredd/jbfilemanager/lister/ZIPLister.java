@@ -9,11 +9,12 @@ import java.util.zip.ZipInputStream;
 /**
  * Copyright 2010 Eduard Gurskiy. All rights reserved.
  * License BSD. Use is subject to license terms.
- * @author Eduard Gurskiy
- *
+ * <br>
  * JBFileManager
- *
+ * <br>
  * ZIP archives lister.
+ *
+ * @author Eduard Gurskiy
  */
 public class ZIPLister extends FolderLister {
 

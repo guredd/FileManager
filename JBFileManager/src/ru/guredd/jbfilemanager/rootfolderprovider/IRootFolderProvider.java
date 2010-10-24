@@ -7,11 +7,12 @@ import java.util.List;
 /**
  * Copyright 2010 Eduard Gurskiy. All rights reserved.
  * License BSD. Use is subject to license terms.
- * @author Eduard Gurskiy
- *
+ * <br>
  * JBFileManager
- *
+ * <br>
  * Interface for root folder providers.
+ *
+ * @author Eduard Gurskiy
  */
 public interface IRootFolderProvider {
     /**

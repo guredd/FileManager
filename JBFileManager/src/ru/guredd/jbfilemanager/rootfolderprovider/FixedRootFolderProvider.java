@@ -8,11 +8,12 @@ import java.util.List;
 /**
  * Copyright 2010 Eduard Gurskiy. All rights reserved.
  * License BSD. Use is subject to license terms.
- * @author Eduard Gurskiy
- *
+ * <br>
  * JBFileManager
- *
+ * <br>
  * Static root folder provider. Returns always the same root folder, which is preconfigured in JBFM servlet.
+ *
+ * @author Eduard Gurskiy
  */
 public class FixedRootFolderProvider implements IRootFolderProvider {
 

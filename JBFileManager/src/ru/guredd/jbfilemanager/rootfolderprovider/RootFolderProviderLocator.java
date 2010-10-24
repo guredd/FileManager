@@ -5,11 +5,12 @@ import java.util.List;
 /**
  * Copyright 2010 Eduard Gurskiy. All rights reserved.
  * License BSD. Use is subject to license terms.
- * @author Eduard Gurskiy
- *
+ * <br>
  * JBFileManager
- *
+ * <br>
  * Locator for root folder provider.
+ *
+ * @author Eduard Gurskiy
  */
 public final class RootFolderProviderLocator {
 

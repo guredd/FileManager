@@ -15,7 +15,11 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * JBFileManager from Eduard Gurskiy, 2010
+ * Copyright 2010 Eduard Gurskiy. All rights reserved.
+ * License BSD. Use is subject to license terms.
+ * @author Eduard Gurskiy
+ *
+ * JBFileManager
  *
  * Main Servlet class.
  */

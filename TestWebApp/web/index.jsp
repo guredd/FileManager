@@ -9,15 +9,15 @@
 <html>
   <head>
       <!-- provide link to jbfm.css
-      URL is: <JBFM servlet URL> + ?op=css&name=jbfm.css -->
+      URL is: <JBFM servlet URL>?op=css&name=jbfm.css -->
       <link rel="stylesheet" href="http://localhost:8080/test/jbfm?op=css&name=jbfm.css" type="text/css">
 
       <!-- provide link to jquery, if it is not done before
-      URL is: <JBFM servlet URL> + ?op=js&name=jquery-1.4.2.min.js -->
+      URL is: <JBFM servlet URL>?op=js&name=jquery-1.4.2.min.js -->
       <script src="http://localhost:8080/test/jbfm?op=js&name=jquery-1.4.2.min.js" type="text/javascript"></script>
 
       <!-- provide link to jquery, if it is not done before
-      URL is: <JBFM servlet URL> + ?op=js&name=jbfm.js -->
+      URL is: <JBFM servlet URL>?op=js&name=jbfm.js -->
       <script src="http://localhost:8080/test/jbfm?op=js&name=jbfm.js" type="text/javascript"></script>
 
       <title>JBFileManager test page</title>

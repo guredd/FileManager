@@ -1,7 +1,11 @@
 package ru.guredd.jbfilemanager.lister;
 
 /**
- * JBFileManager from Eduard Gurskiy, 2010
+ * Copyright 2010 Eduard Gurskiy. All rights reserved.
+ * License BSD. Use is subject to license terms.
+ * @author Eduard Gurskiy
+ *
+ * JBFileManager
  *
  * Unsupported containers lister. Returns always single item informing about unsupported container.
  */

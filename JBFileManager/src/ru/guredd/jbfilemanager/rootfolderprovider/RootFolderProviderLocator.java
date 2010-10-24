@@ -3,7 +3,11 @@ package ru.guredd.jbfilemanager.rootfolderprovider;
 import java.util.List;
 
 /**
- * JBFileManager from Eduard Gurskiy, 2010
+ * Copyright 2010 Eduard Gurskiy. All rights reserved.
+ * License BSD. Use is subject to license terms.
+ * @author Eduard Gurskiy
+ *
+ * JBFileManager
  *
  * Locator for root folder provider.
  */

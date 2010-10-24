@@ -5,7 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * JBFileManager from Eduard Gurskiy, 2010
+ * Copyright 2010 Eduard Gurskiy. All rights reserved.
+ * License BSD. Use is subject to license terms.
+ * @author Eduard Gurskiy
+ *
+ * JBFileManager
  *
  * Class responsible for persistence of JBFM tree state via HTTP session.
  */
@@ -14,12 +18,12 @@ public class HttpSessionTreePersistence {
     /**
      * Name of HTTP session attribute, where to store expanded path.
      */
-    private static final String EXPANDED_NODES = "jbfm_expanded_nodes";
+    private static final String EXPANDED_NODES = "ru.guredd.jbfilemanager.HttpSessionTreePersistence:jbfm_expanded_nodes";
 
     /**
      * Creates array of expanded paths as HTTP session attribute.
      * @param session current HTTP session
-     * @return array of expanded paths stored in HTTP session
+     * @return array of expanded paths stored in HTTP session, if session is not null, otherwise - returns null
      */
     private static List<String> createExpandedNodes(HttpSession session) {
         if(session != null) {

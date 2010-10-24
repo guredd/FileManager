@@ -5,7 +5,11 @@ import java.io.IOException;
 import java.util.TreeSet;
 
 /**
- * JBFileManager from Eduard Gurskiy, 2010
+ * Copyright 2010 Eduard Gurskiy. All rights reserved.
+ * License BSD. Use is subject to license terms.
+ * @author Eduard Gurskiy
+ *
+ * JBFileManager
  *
  * Folder lister.
  */

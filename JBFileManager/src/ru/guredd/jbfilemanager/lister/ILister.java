@@ -3,7 +3,11 @@ package ru.guredd.jbfilemanager.lister;
 import java.io.IOException;
 
 /**
- * JBFileManager from Eduard Gurskiy, 2010
+ * Copyright 2010 Eduard Gurskiy. All rights reserved.
+ * License BSD. Use is subject to license terms.
+ * @author Eduard Gurskiy
+ *
+ * JBFileManager
  *
  * Interface for container listers.
  */

@@ -5,7 +5,11 @@ import ru.guredd.jbfilemanager.lister.IListedItem;
 import javax.servlet.http.HttpSession;
 
 /**
- * JBFileManager from Eduard Gurskiy, 2010
+ * Copyright 2010 Eduard Gurskiy. All rights reserved.
+ * License BSD. Use is subject to license terms.
+ * @author Eduard Gurskiy
+ *
+ * JBFileManager
  *
  * JSON builder for listers results.
  */
@@ -40,7 +44,7 @@ public class JSONBuilder {
      * @return JSON string with serialized items
      */
     public static String buildItemsList(IListedItem[] items, String path, HttpSession session) {
-        StringBuffer buf = new StringBuffer("{\"" + NODES + "\":[");
+        StringBuilder buf = new StringBuilder("{\"" + NODES + "\":[");
         if(items != null) {
             for(int i=0;i<items.length;i++) {
                 buf.append("{\"" + NODE_NAME + "\":\"");

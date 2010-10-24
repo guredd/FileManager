@@ -41,9 +41,13 @@ function jbfilemanager(id, url, rootLabel) {
     function listNode(node) {
 
         // ajax successful callback:
-        var onSuccess = function(data) {
-            onLoaded(data.nodes);
-            showProgress(false);
+        var onSuccess = function(data, status, xhr) {
+            if(xhr.status == 0) {
+                onError(xhr,status);
+            } else {
+                onLoaded(data.nodes);
+                showProgress(false);
+            }
         };
 
         // ajax error callback:
@@ -53,10 +57,13 @@ function jbfilemanager(id, url, rootLabel) {
             if (xhr.status != 200) {
                 text = xhr.responseText;
             } else {
-                text = 'Incorrect data received!';
+                text = 'Incorrect json data received!';
             }
-            var msg = "Error " + status  + ' : ' + text;
-            alert(msg)
+            var msg = status;
+            if(text) {
+                msg += ' : ' + text;
+            }
+            alert(msg);
         };
 
         // show/hide animated progress:
@@ -105,6 +112,7 @@ function jbfilemanager(id, url, rootLabel) {
         // request node contents from server:
         $.ajax({
             url: url,
+            timeout: 20000, // 10 sec
             data: {op:"list",type:node.data("type"),path:encodeURIComponent(buildNodePath(node))},
             dataType: "json",
             success: onSuccess,

@@ -53,9 +53,11 @@ public class JSONBuilder {
                 buf.append("\",\"" + NODE_TYPE + "\":\"");
                 buf.append(items[i].getType());
                 buf.append("\",\"" + NODE_EXPANDABLE + "\":\"");
-                buf.append(items[i].isExpandable());               
+                buf.append(items[i].isExpandable());
+                
+                String pathCheck = "/".equals(path) ? '/' + items[i].getName() : path + '/' + items[i].getName();
 
-                if(HttpSessionTreePersistence.isExpanded(path + '/' + items[i].getName(),session)) {
+                if(HttpSessionTreePersistence.isExpanded(pathCheck,session)) {
                     buf.append("\",\"" + IS_EXPANDED + "\":\"");
                     buf.append("true");
                 }

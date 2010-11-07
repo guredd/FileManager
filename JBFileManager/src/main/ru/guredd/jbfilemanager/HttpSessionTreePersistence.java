@@ -81,7 +81,7 @@ public class HttpSessionTreePersistence {
     public static boolean isExpanded(String path, HttpSession session) {
         if(session == null) {
             return false;
-        }
+        }       
         Object obj;
         if((obj = session.getAttribute(EXPANDED_NODES)) != null && obj instanceof List) {
             return ((List) obj).contains(path);

@@ -32,10 +32,10 @@ public final class ListerLocator {
      * Initializes locator instantiating all configured listers (from properties file for listers).
      * @param props listers properties
      * @param mode listers detalisation mode
-     * @throws IOException in case of errror
-     * @throws ClassNotFoundException in case of errror
-     * @throws IllegalAccessException in case of errror
-     * @throws InstantiationException in case of errror
+     * @throws IOException in case of error
+     * @throws ClassNotFoundException in case of error
+     * @throws IllegalAccessException in case of error
+     * @throws InstantiationException in case of error
      */
     public synchronized static void initialize(Properties props, int mode) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException {
         initialized = false;

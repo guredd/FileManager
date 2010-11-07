@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TestWebApp">
+    <output-path>$PROJECT_DIR$/out</output-path>
+    <root id="archive" name="TestWebApp.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="artifact" artifact-name="JBFileManager:jar" />
+        </element>
+        <element id="file-copy" path="$PROJECT_DIR$/TestWebApp/web/WEB-INF/web.xml" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/TestWebApp/web/index.jsp" />
+    </root>
+  </artifact>
+</component>
